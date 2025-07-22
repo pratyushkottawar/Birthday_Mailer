@@ -153,7 +153,7 @@ def main():
     birthday_people = []
     other_members = []
 
-    with open('birthdays.csv', newline='') as csvfile:
+    with open('birthdays_test.csv', newline='') as csvfile:
         reader = csv.DictReader(csvfile)
         for row in reader:
             name = row.get('name')
