@@ -22,8 +22,8 @@ def send_email(subject, body, to_email, email_user, email_pass):
 
 def main():
     print("🔁 Script started...")
-    email_user = os.environ.get('EMAIL_USER')
-    email_pass = os.environ.get('EMAIL_PASS')
+    email_user = os.environ.get('EMAIL')
+    email_pass = os.environ.get('EMAIL_PASSWORD')
 
     if not email_user or not email_pass:
         print("❗ Email credentials not found in environment variables.")
