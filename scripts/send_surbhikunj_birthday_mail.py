@@ -11,7 +11,6 @@ email_pass = os.environ.get('EMAIL_PASSWORD')
 
 today = datetime.datetime.now().strftime("%d-%m")
 TEMPLATE_PATH = "mail_templates/surbhikunj_members_birthday_mail.html"
-print(email_user)
 with open(CSV_FILE_PATH, newline='') as csvfile:
     reader = csv.DictReader(csvfile)
     for row in reader:
