@@ -20,7 +20,7 @@ with open(CSV_FILE_PATH, newline='') as csvfile:
     for row in reader:
         if row.get('birthday') == today:
             birthday_names.append(row.get('name'))
-        elif row.get('category') == 'surbhikunj':
+        elif row.get('reminder') == 'yes':
             members_to_notify.append(row.get('email'))
 
 if birthday_names:
