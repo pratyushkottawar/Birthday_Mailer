@@ -1,1 +1,1 @@
-CSV_FILE_PATH = "./data/birthdays_test.csv"
+CSV_FILE_PATH = "data/birthdays_test.csv"

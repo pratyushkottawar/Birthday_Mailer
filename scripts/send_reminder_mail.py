@@ -1,3 +1,7 @@
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+
 import csv, datetime, os
 from config import CSV_FILE_PATH
 from utils import send_html_email, load_template
@@ -6,12 +10,12 @@ EMAIL = os.environ.get('EMAIL')
 PASSWORD = os.environ.get('EMAIL_PASSWORD')
 
 today = datetime.datetime.now().strftime("%d-%m")
-TEMPLATE_PATH = "../mail_templates/reminder_mail.html"
+TEMPLATE_PATH = "mail_templates/reminder_mail.html"
 
 birthday_names = []
 members_to_notify = []
 
-with open('../CSV_FILE_PATH', newline='') as csvfile:
+with open(CSV_FILE_PATH, newline='') as csvfile:
     reader = csv.DictReader(csvfile)
     for row in reader:
         if row.get('birthday') == today and row.get('category') in ['surbhikunj']:
