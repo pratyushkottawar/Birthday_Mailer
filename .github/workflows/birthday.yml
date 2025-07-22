@@ -25,4 +25,4 @@ jobs:
         env:
           EMAIL: ${{ secrets.EMAIL }}
           EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
-        run: python birthday_mailer.py
+        run: python send_all_mails.py
