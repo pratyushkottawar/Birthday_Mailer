@@ -18,7 +18,7 @@ def send_birthday_email(name, to_email, email_user, email_pass):
     <html>
       <body style="font-family: Arial, sans-serif;">
         <h2>🎂 Happy Krishna Conscious Birthday, {name} 🎂</h2>
-        <p>Whether you're still at Surbhikunj VOICE or were part of it before, you're always one of us. The bond we’ve shared in this beautiful space built on service, association, and smiles stays forever.</p>
+        <p>Whether you're still at <span style="font-weight: bold; color: #1b5e20; font-style: italic;">Surbhikunj VOICE</span> or were part of it before, you're always one of us. The bond we’ve shared in this beautiful space built on service, association, and smiles stays forever.</p>
         <p>On this special day, we all pray that you make swift advancement in Krishna consciousness. </p>
         <p>🙏 May SSRKB, SSGN, Srila Prabhupada, and all the Vaishnavas bless you with their choicest blessings.</p>
         <img src="cid:birthdayimage" width="400" style="border-radius: 10px;" />
