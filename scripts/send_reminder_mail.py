@@ -33,3 +33,5 @@ if birthday_names:
             EMAIL,
             PASSWORD
         )
+else:
+    print("No Birthday's today")
