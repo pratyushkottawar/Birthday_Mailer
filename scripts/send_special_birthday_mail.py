@@ -2,14 +2,18 @@ import sys
 import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
-import csv, datetime, os
+import csv, os
+from datetime import datetime
+from zoneinfo import ZoneInfo  # Only available in Python 3.9+
+
 from config import CSV_FILE_PATH
 from utils import send_html_email, load_template
 
 EMAIL = os.environ.get('EMAIL')
 PASSWORD = os.environ.get('EMAIL_PASSWORD')
 
-today = datetime.datetime.now().strftime("%d-%m")
+# Get IST date
+today = datetime.now(ZoneInfo("Asia/Kolkata")).strftime("%d-%m")
 TEMPLATE_PATH = "mail_templates/special_birthday_mail.html"
 
 with open(CSV_FILE_PATH, newline='') as csvfile:
